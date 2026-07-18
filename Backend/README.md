@@ -1,4 +1,4 @@
-# محرك كشف الاحتيال — Clustering + Classification
+# قصر -
 
 ## الفكرة
 - **KMeans clustering** على السلوك (المبلغ، المسافة، التوقيت...) → يستخرج "درجة خطورة العنقود"
@@ -13,21 +13,13 @@
 - `train_model.py` — التدريب الكامل، يُشغَّل مرة وحدة على بياناتك
 - `app.py` — سيرفر Flask يقدّم الموديل المدرّب كـ API
 
-## خطوة 1: التدريب (تشغيلها أول مرة فقط، أو كل ما تحدّثين البيانات)
+## خطوة 1: التدريب )
 
 ```bash
 cd backend
 pip install -r requirements.txt
 python train_model.py --data path/to/your_dataset.csv
 ```
-
-هذا بيطلع لك مجلد `artifacts/` فيه:
-- الموديل المدرّب (`xgb_model.pkl`) وكل مكوناته (`kmeans.pkl`, `cluster_scaler.pkl`, `target_encoder.pkl`)
-- `config.json` — الميزات المستخدمة والعتبات المحسوبة
-- `metrics.json` — تقرير الدقة الكامل (ROC-AUC, PR-AUC, Precision/Recall/F1، Confusion Matrix)
-- 4 رسومات PNG: Confusion Matrix، ROC Curve، Precision-Recall Curve، أهم الميزات
-
-بيطبع لك بالتيرمنال أيضًا جدول Precision/Recall لكل عتبة ممكنة — لو حبيتي تعدّلين حساسية التصنيف يدويًا.
 
 ## خطوة 2: تشغيل السيرفر
 
