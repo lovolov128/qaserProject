@@ -76,7 +76,3 @@ POST /analyze
   "top_factors": ["distance_from_home_km", "failed_attempts", "cluster_risk_score", "is_international", "transaction_amount"]
 }
 ```
-
-## ملاحظة مهمة
-حقول هذا الموديل (transaction_amount, device_type, distance_from_home_km...) مختلفة عن حقول فورم الفرونت الحالي
-(اسم عميل، رقم حساب، قرابة، آيبان). لازم نعدّل الفرونت ليطابق حقول المعاملة الفعلية قبل الربط النهائي.
