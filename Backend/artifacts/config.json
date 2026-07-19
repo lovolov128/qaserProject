@@ -1,0 +1,65 @@
+{
+  "feature_cols": [
+    "hour_of_day",
+    "is_weekend",
+    "is_night_transaction",
+    "customer_age",
+    "credit_score",
+    "account_age_years",
+    "account_balance",
+    "transaction_amount",
+    "num_prev_transactions",
+    "transaction_freq_monthly",
+    "distance_from_home_km",
+    "time_since_last_txn_hrs",
+    "is_international",
+    "failed_attempts",
+    "pin_changed_recently",
+    "country_risk",
+    "city_risk",
+    "merchant_category_risk",
+    "payment_method_risk",
+    "device_type_risk",
+    "cluster_risk_score"
+  ],
+  "numeric_features": [
+    "hour_of_day",
+    "is_weekend",
+    "is_night_transaction",
+    "customer_age",
+    "credit_score",
+    "account_age_years",
+    "account_balance",
+    "transaction_amount",
+    "num_prev_transactions",
+    "transaction_freq_monthly",
+    "distance_from_home_km",
+    "time_since_last_txn_hrs",
+    "is_international",
+    "failed_attempts",
+    "pin_changed_recently"
+  ],
+  "categorical_features": [
+    "country",
+    "city",
+    "merchant_category",
+    "payment_method",
+    "device_type"
+  ],
+  "cluster_fraud_rate": {
+    "0": 0.07473405665424714,
+    "1": 0.034779122981994835,
+    "2": 0.14257900023178552,
+    "3": 0.06355733082706767,
+    "4": 0.0415966844803141
+  },
+  "global_fraud_rate": 0.055255,
+  "thresholds": {
+    "mid_safe": 0.44999999999999996,
+    "fraud_danger": 0.85
+  },
+  "rule_thresholds": {
+    "avg_account_balance": 16594.2544199,
+    "amount_credit_ratio_p95": 1.2246090057453372
+  }
+}
