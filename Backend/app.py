@@ -25,8 +25,6 @@ ARTIFACT_DIR = "artifacts"
 
 
 
-_cluster_scaler = joblib.load(f"{ARTIFACT_DIR}/cluster_scaler.pkl")
-_target_encoder = joblib.load(f"{ARTIFACT_DIR}/target_encoder.pkl")
 
 with open(f"{ARTIFACT_DIR}/config.json", "r", encoding="utf-8") as f:
     _config = json.load(f)
