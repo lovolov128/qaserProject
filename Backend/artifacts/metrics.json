@@ -1,0 +1,19 @@
+{
+  "roc_auc": 0.7207,
+  "pr_auc": 0.1221,
+  "precision_fraud": 0.1047,
+  "recall_fraud": 0.6286,
+  "f1_fraud": 0.1795,
+  "accuracy": 0.6825,
+  "confusion_matrix": [
+    [
+      129559,
+      59390
+    ],
+    [
+      4104,
+      6947
+    ]
+  ],
+  "n_test_samples": 200000
+}

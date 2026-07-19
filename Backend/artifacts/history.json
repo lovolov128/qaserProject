@@ -1,0 +1,29 @@
+[
+  {
+    "customer_id": "50508341",
+    "badge": "تحقق",
+    "type": "حساب بنكي",
+    "amount": 90.0,
+    "category": "grocery",
+    "date": "18/7/2026",
+    "tier": "mid_safe"
+  },
+  {
+    "customer_id": "SA37 1000 0011 1000 1964 6001",
+    "badge": "تحقق",
+    "type": "حساب بنكي",
+    "amount": 100.0,
+    "category": "grocery",
+    "date": "18/7/2026",
+    "tier": "mid_safe"
+  },
+  {
+    "customer_id": "SA37 1000 0011 1000 1964 6001",
+    "badge": "تحقق",
+    "type": "حساب بنكي",
+    "amount": 40000.0,
+    "category": "travel",
+    "date": "18/7/2026",
+    "tier": "mid_safe"
+  }
+]
