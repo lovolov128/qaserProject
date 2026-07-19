@@ -21,20 +21,19 @@ from features import build_feature_matrix, clean_raw_data
 app = Flask(__name__)
 CORS(app)
 
-ARTIFACT_DIR = "artifacts"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARTIFACT_DIR = os.path.join(BASE_DIR, "artifacts")
 
-_model = joblib.load(f"{ARTIFACT_DIR}/xgb_model.pkl")
-_kmeans = joblib.load(f"{ARTIFACT_DIR}/kmeans.pkl")
-_cluster_scaler = joblib.load(f"{ARTIFACT_DIR}/cluster_scaler.pkl")
-_target_encoder = joblib.load(f"{ARTIFACT_DIR}/target_encoder.pkl")
+_model = joblib.load(os.path.join(ARTIFACT_DIR, "xgb_model.pkl"))
+_kmeans = joblib.load(os.path.join(ARTIFACT_DIR, "kmeans.pkl"))
+_cluster_scaler = joblib.load(os.path.join(ARTIFACT_DIR, "cluster_scaler.pkl"))
+_target_encoder = joblib.load(os.path.join(ARTIFACT_DIR, "target_encoder.pkl"))
 
-
-with open(f"{ARTIFACT_DIR}/config.json", "r", encoding="utf-8") as f:
+with open(os.path.join(ARTIFACT_DIR, "config.json"), "r", encoding="utf-8") as f:
     _config = json.load(f)
 
-with open(f"{ARTIFACT_DIR}/metrics.json", "r", encoding="utf-8") as f:
+with open(os.path.join(ARTIFACT_DIR, "metrics.json"), "r", encoding="utf-8") as f:
     _metrics = json.load(f)
-
 
 FEATURE_COLS = _config["feature_cols"]
 NUMERIC_FEATURES = _config["numeric_features"]
