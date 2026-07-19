@@ -26,12 +26,6 @@ ARTIFACT_DIR = "artifacts"
 
 
 
-with open(f"{ARTIFACT_DIR}/config.json", "r", encoding="utf-8") as f:
-    _config = json.load(f)
-
-with open(f"{ARTIFACT_DIR}/metrics.json", "r", encoding="utf-8") as f:
-    _metrics = json.load(f)
-
 FEATURE_COLS = _config["feature_cols"]
 NUMERIC_FEATURES = _config["numeric_features"]
 CATEGORICAL_FEATURES = _config["categorical_features"]
