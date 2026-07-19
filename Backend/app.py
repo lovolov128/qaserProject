@@ -23,7 +23,17 @@ CORS(app)
 
 ARTIFACT_DIR = "artifacts"
 
+_model = joblib.load(f"{ARTIFACT_DIR}/xgb_model.pkl")
+_kmeans = joblib.load(f"{ARTIFACT_DIR}/kmeans.pkl")
+_cluster_scaler = joblib.load(f"{ARTIFACT_DIR}/cluster_scaler.pkl")
+_target_encoder = joblib.load(f"{ARTIFACT_DIR}/target_encoder.pkl")
 
+
+with open(f"{ARTIFACT_DIR}/config.json", "r", encoding="utf-8") as f:
+    _config = json.load(f)
+
+with open(f"{ARTIFACT_DIR}/metrics.json", "r", encoding="utf-8") as f:
+    _metrics = json.load(f)
 
 
 FEATURE_COLS = _config["feature_cols"]
